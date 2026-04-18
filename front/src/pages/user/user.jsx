@@ -4,7 +4,7 @@ export default function User () {
     return(
         <main className="main bg-dark">
             <div className="header">
-                <h1>Welcome back<br />Tony Jarvis!</h1>
+                <h1 className="header__h1">Welcome back<br />Tony Jarvis!</h1>
                 <button className="header__button">Edit Name</button>
             </div>
             <h2 className="sr-only">Accounts</h2>
@@ -15,8 +15,8 @@ export default function User () {
                     <p className="account__content-wrapper--amount">$2,082.79</p>
                     <p className="account__content-wrapper--amount-description">Available Balance</p>
                 </div>
-                <div className="account__content-wrapper cta">
-                    <button className="account__content-wrapper--transaction-button">View transactions</button>
+                <div className="account__content-wrapper2">
+                    <button className="account__content-wrapper2--transaction-button">View transactions</button>
                 </div>
             </section>
 
@@ -26,8 +26,8 @@ export default function User () {
                     <p className="account__content-wrapper--amount">$10,928.42</p>
                     <p className="account__content-wrapper--amount-description">Available Balance</p>
                 </div>
-                <div className="account__content-wrapper cta">
-                    <button className="account__content-wrapper--transaction-button">View transactions</button>
+                <div className="account__content-wrapper2">
+                    <button className="account__content-wrapper2--transaction-button">View transactions</button>
                 </div>
             </section>
 
@@ -37,8 +37,8 @@ export default function User () {
                     <p className="account__content-wrapper--amount">$184.30</p>
                     <p className="account__content-wrapper--amount-description">Current Balance</p>
                 </div>
-                <div className="account-content-wrapper cta">
-                    <button className="transaction-button">View transactions</button>
+                <div className="account__content-wrapper2">
+                    <button className="account__content-wrapper2--transaction-button">View transactions</button>
                 </div>
             </section>
         </main>

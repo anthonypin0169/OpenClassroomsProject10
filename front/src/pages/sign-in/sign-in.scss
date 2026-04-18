@@ -1,12 +1,11 @@
-
-
 .sign-in__content {
     box-sizing: border-box;
     background-color: white;
     width: 300px;
-    margin: 0 auto;
-    margin-top: 3rem;
+    margin: 66px auto;
     padding: 2rem;
+    transform: scale(1.35); 
+    transform-origin: top center; 
     &--button {
         display: block;
         width: 100%;
@@ -19,7 +18,7 @@
         color: #fff;    
     }
     &--icon {
-        font-size: 5rem;
+        font-size: inherit;
     }
 }
 
