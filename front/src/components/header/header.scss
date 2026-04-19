@@ -32,6 +32,19 @@
 .main-nav__item:hover {
   text-decoration: underline;
 }
-
-
-
+@media (max-width: 768px) {
+  .main-nav {
+      &__logo {
+          &--image {
+          width: 200px;
+          margin-bottom: 0;
+          }
+      }
+      &__item {
+      margin-right: 0.4rem;
+    }
+  }
+  .main-nav a {
+    font-size: 16px;
+  }
+}

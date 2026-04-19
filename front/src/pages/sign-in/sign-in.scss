@@ -21,4 +21,15 @@
         font-size: inherit;
     }
 }
+@media (max-width: 768px) {
+    .sign-in__content {
 
+        margin: 50px auto 80px auto;
+        padding: 2rem;
+        transform: scale(1); 
+        transform-origin: top center; 
+        &--button {
+            margin-top: 1rem;
+        }
+    }
+}

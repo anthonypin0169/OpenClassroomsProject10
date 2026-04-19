@@ -13,7 +13,7 @@
         padding: 2rem;
         text-align: left;
         margin: 0 auto;
-        transform: scale(1.33); 
+        transform: scale(1);
         transform-origin: top center; 
         &--subtitle {
             font-weight: bold;
@@ -36,6 +36,8 @@
             right: 140px;
             width: 300px;
             margin: 2rem;
+            transform: scale(1.33); 
+            transform-origin: top center;
             &--subtitle {
                 font-size: 1.5rem;
             }
@@ -48,29 +50,49 @@
 .features {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin-top: 0;
     &__item {
-            flex: 1;
-            padding: 2.5rem;
-            &--icon {
-                width: 140px;
-                border: 12px solid #00bc77;
-                border-radius: 50%;
-                padding: 1.2rem;
-            }
-            &--title {
-                color: #222;
-                font-size: 1.7rem;
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-            }
-            &--text{
-                font-size: 1.4rem;
-            }
+        flex: 1;
+        padding: 2.5rem;
+        &--icon {
+            width: 100px;
+            border: 10px solid #00bc77;
+            border-radius: 50%;
+            padding: 1rem;
+        }
+        &--title {
+            color: #222;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        &--text{
+            font-size: 1rem;
+        }
     }
 }
 @media (min-width: 920px) {
     .features {
         flex-direction: row;
+        margin-top: 15px;
+        &__item {
+                flex: 1;
+                padding: 2.5rem;
+                &--icon {
+                    width: 140px;
+                    border: 12px solid #00bc77;
+                    border-radius: 50%;
+                    padding: 1.2rem;
+                }
+                &--title {
+                    color: #222;
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                }
+                &--text{
+                    font-size: 1.4rem;
+                }
+        }
     }
 }
