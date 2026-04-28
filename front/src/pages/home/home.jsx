@@ -19,10 +19,10 @@ export default function Home () {
                 <h2 className="sr-only">Features</h2>
 
                 <div className="features__item">
-                    <img 
-                        src={iconChat} 
-                        alt="Chat Icon" 
-                        className="features__item--icon" 
+                    <img
+                        src={iconChat}
+                        alt="Chat icon"
+                        className="features__item--icon"
                         />
                     <h3 className="features__item--title">You are our #1 priority</h3>
                     <p className="features__item--text">
@@ -34,7 +34,7 @@ export default function Home () {
                 <div className="features__item">
                     <img
                         src={iconMoney}
-                        alt="Chat Icon"
+                        alt="Money icon"
                         className="features__item--icon"
                     />
                     <h3 className="features__item--title">More savings means higher rates</h3>
@@ -46,7 +46,7 @@ export default function Home () {
                 <div className="features__item">
                     <img
                         src={iconSecurity}
-                        alt="Chat Icon"
+                        alt="Security icon"
                         className="features__item--icon"
                     />
                     <h3 className="features__item--title">Security you can trust</h3>
