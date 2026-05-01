@@ -1,11 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { loginUser } from '../../store/authSlice.jsx'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import "./sign-in.scss"
 
 export function SignIn() { 
   const dispatch = useDispatch()
-  const { isLoading, error } = useSelector((state) => state.auth)
-  
+  const { isAuthenticated, isLoading, error } = useSelector((state) => state.auth)
+  const navigate = useNavigate()
+useEffect(() => {
+  if(!isLoading && isAuthenticated){
+    navigate("/profile")
+  }
+},[isAuthenticated, isLoading, navigate])
+
   const handleSubmit = (e) => {
     e.preventDefault()
     

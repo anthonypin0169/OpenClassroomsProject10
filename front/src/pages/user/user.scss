@@ -1,121 +1,158 @@
-.header {
-  color: #fff;
-  margin-bottom: 2.2rem;
-  &__h1{
-    font-size: 42px;
+.user {
+  &--dark {
+    background-color: #12002b;
+    min-height: calc(100vh - 140px); /* Ajuster selon header/footer */
+    padding: 2rem 0;
   }
-  &__button {
-    border-color: #00bc77;
-    background-color: #00bc77;
-    color: #fff;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 16px;
-  }
-}
-.account {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid black;
-  background-color: #fff;
-  width: 80%;
-  margin: 10px auto;
-  flex-direction: column;
-  padding: 1.8rem;
-  box-sizing: border-box;
-  text-align: left;
-  margin-bottom: 2rem;
-    &__content-wrapper {
-        width: 100%;
-        flex: 1;
-        &--title {
-            margin: 0;
-            padding: 0;
-            font-size: 1.4rem;
-            font-weight: normal;
-        }
-        &--amount {
-            margin: 2px 0;
-            font-size: 3.2rem;
-            font-weight: bold;
-        }
-        &--amount-description {
-            margin: 0;
-            font-size: 1.4rem;
-        }
-    }
-    &__content-wrapper2 {
-        width: 100%;
-        flex: 1;
-        &--transaction-button {
-            display: block;
-            width: 100%;
-            padding: 13px ;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 1rem;
-            margin-right: 0.3rem;
-            border-color: #00bc77;
-            background-color: #00bc77;
-            color: #fff;
-            white-space: nowrap;
-        }
-    }
-}
-@media (max-width: 720px) {
-  .header {
+  &__header {
     color: #fff;
     margin-bottom: 2.2rem;
-    &__h1 {
-      font-size: 32px;
+    text-align: center;
+    &--title {
+      font-size: 42px;
+      margin-bottom: 1rem;
+      font-weight: normal;
     }
-    &__button {
-      font-size: 14px;
-      padding: 10px;
+    
+    &--logout-button {
+      border-color: #00bc77;
+      background-color: #00bc77;
+      color: #fff;
+      font-weight: bold;
+      font-size: 17px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    
+      &:hover {
+        background-color: #009e66;
+      }
     }
   }
-  .account {
-    flex-direction: column; 
-    margin: 0 auto;
-    padding: 1.5rem;
+  &__account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 80%;
+    margin: 10px auto;
+    flex-direction: column;
+    padding: 1.8rem;
+    box-sizing: border-box;
+    text-align: left;
     margin-bottom: 2rem;
-    &__content-wrapper {
+    border-radius: 4px;
+    &--content {
       width: 100%;
       flex: 1;
-      &--title {
-        font-size: 1rem;
-      }
-      &--amount {
-        margin: 0;
-        font-size: 2.5rem;
-      }
-      &--amount-description {
-        font-size: 1rem;
-      }
     }
-    &__content-wrapper2 {
-      width: 100%;
-      flex: 0;
-      &--transaction-button {
-        width: 100%; 
-        padding: 8px;
-        font-size: 1.1rem;
-        margin-top: 1rem;
-        margin-right: 0;
-      }
+    
+    &--title {
+      margin: 0;
+      padding: 0;
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: #2c3e50;
+    }
+    
+    &--amount {
+      margin: 2px 0;
+      font-size: 3.2rem;
+      font-weight: bold;
+      color: #2c3e50;
     }
   }
 }
 
+.user__account-actions {
+  width: 100%;
+  flex: 1;
+  margin-top: 1rem;
+  &--transaction-button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #00bc77;
+    color: #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  
+    &:hover {
+      background-color: #009e66;
+    }
+  }
+}
+
+
+.user__account-description {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #666;
+}
+
+@media (max-width: 720px) {
+  .user__header {
+    margin-bottom: 2.2rem;
+  }
+
+  .user__title {
+    font-size: 32px;
+  }
+
+  .user__logout-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .user__account {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .user__account-title {
+    font-size: 1rem;
+  }
+
+  .user__account-amount {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  .user__account-description {
+    font-size: 1rem;
+  }
+
+  .user__transaction-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 721px) {
-  .account {
+  .user__account {
     flex-direction: row;
   }
-  .account__content-wrapper2 {
+
+  .user__account-actions {
     flex: 0;
-    &--transaction-button {
-      width: 200px;
-    }
+    text-align: right;
+  }
+
+  .user__transaction-button {
+    width: 200px;
   }
 }
