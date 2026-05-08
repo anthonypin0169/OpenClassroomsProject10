@@ -1,1 +1,92 @@
-/*# sourceMappingURL=sign-in.css.map */
+.sign-in__content {
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  margin: 66px auto;
+  padding: 2rem;
+  transform: scale(1.35);
+  transform-origin: top center;
+}
+.sign-in__content .sign-in__icon {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+.sign-in__content .sign-in__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+.sign-in__content .sign-in__error {
+  color: #ff0000;
+  background-color: #ffe6e6;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #ffcccc;
+  font-size: 0.9rem;
+}
+.sign-in__content .sign-in__input-wrapper {
+  margin-bottom: 16px;
+}
+.sign-in__content .sign-in__label {
+  display: block;
+  text-align: start;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.sign-in__content .sign-in__input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.sign-in__content .sign-in__input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 188, 119, 0.2);
+}
+.sign-in__content .sign-in__remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.sign-in__content .sign-in__checkbox {
+  margin-right: 8px;
+}
+.sign-in__content .sign-in__remember-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+.sign-in__content .sign-in__button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 1px;
+  background-color: #00bc77;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.sign-in__content .sign-in__button:hover:not(:disabled) {
+  background-color: #009e66;
+}
+.sign-in__content .sign-in__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .sign-in__content {
+    margin: 50px auto 80px auto;
+    padding: 2rem;
+    transform: scale(1);
+    transform-origin: top center;
+  }
+}/*# sourceMappingURL=sign-in.css.map */

@@ -1,1 +1,138 @@
-/*# sourceMappingURL=user.css.map */
+.user--dark {
+  background-color: #12002b;
+  min-height: calc(100vh - 140px); /* Ajuster selon header/footer */
+  padding: 2rem 0;
+}
+.user__header {
+  color: #fff;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+.user__header--title {
+  font-size: 44px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.user__header--logout-button {
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.user__header--logout-button:hover {
+  background-color: #009e66;
+}
+.user__account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 80%;
+  margin: 10px auto;
+  flex-direction: column;
+  padding: 1.6rem;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 3rem;
+  border-radius: 4px;
+}
+.user__account--content {
+  width: 100%;
+  flex: 1;
+}
+.user__account--title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #2c3e50;
+}
+.user__account--amount {
+  margin: 2px 0;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.user__account--description {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.user__account-actions {
+  width: 100%;
+  flex: 1;
+  margin-top: 1rem;
+}
+.user__account-actions--transaction-button {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #00bc77;
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.user__account-actions--transaction-button:hover {
+  background-color: #009e66;
+}
+
+@media (max-width: 720px) {
+  .user__header {
+    margin-bottom: 2.2rem;
+  }
+  .user__title {
+    font-size: 32px;
+  }
+  .user__logout-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .user__account {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .user__account-title {
+    font-size: 1rem;
+  }
+  .user__account-amount {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  .user__account-description {
+    font-size: 1rem;
+  }
+  .user__transaction-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+}
+@media (min-width: 721px) {
+  .user__account {
+    flex-direction: row;
+  }
+  .user__account-actions {
+    flex: 0;
+    text-align: right;
+  }
+  .user__transaction-button {
+    width: 200px;
+  }
+}/*# sourceMappingURL=user.css.map */

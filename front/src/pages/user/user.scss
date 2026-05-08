@@ -9,9 +9,9 @@
     margin-bottom: 2.2rem;
     text-align: center;
     &--title {
-      font-size: 42px;
+      font-size: 44px;
       margin-bottom: 1rem;
-      font-weight: normal;
+      font-weight: 700;
     }
     
     &--logout-button {
@@ -40,16 +40,15 @@
     width: 80%;
     margin: 10px auto;
     flex-direction: column;
-    padding: 1.8rem;
+    padding: 1.6rem;
     box-sizing: border-box;
     text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     border-radius: 4px;
     &--content {
       width: 100%;
       flex: 1;
     }
-    
     &--title {
       margin: 0;
       padding: 0;
@@ -57,13 +56,16 @@
       font-weight: normal;
       color: #2c3e50;
     }
-    
     &--amount {
       margin: 2px 0;
       font-size: 3.2rem;
       font-weight: bold;
       color: #2c3e50;
     }
+    &--description {
+    margin: 0;
+    font-size: 1.4rem;
+  }
   }
 }
 
@@ -93,11 +95,7 @@
 }
 
 
-.user__account-description {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #666;
-}
+
 
 @media (max-width: 720px) {
   .user__header {

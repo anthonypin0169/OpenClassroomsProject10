@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { logout } from '../../store/authSlice'
+import AccountContent from '../../components/accountContent/accountContent'
 import "./user.scss"
 
 export default function User () {
@@ -14,43 +15,17 @@ export default function User () {
     return(
         <main className="user bg-dark">
             <div className="user__header">
-                <h1 className="user__header--title">Welcome back<br />{user?.firstName || 'User'}!</h1>
-                <button className="user__header--logout-button" onClick={handleLogout}>Logout</button>
+                <h1 className="user__header--title">Welcome back<br />{user?.firstName || 'User'} {user?.lastName}!</h1>
+                <button className="user__header--logout-button" onClick={handleLogout}>Edit Name</button>
             </div>
             <h2 className="sr-only">Accounts</h2>
 
-            <section className="user__account">
-                <div className="user__account--content">
-                    <h3 className="user__account--title">Argent Bank Checking (x8349)</h3>
-                    <p className="user__account--amount">$2,082.79</p>
-                    <p className="user__account--description">Available Balance</p>
-                </div>
-                <div className="user__account-actions">
-                    <button className="user__account-actions--transaction-button">View transactions</button>
-                </div>
-            </section>
-
-            <section className="user__account">
-                <div className="user__account--content">
-                    <h3 className="user__account--title">Argent Bank Savings (x6712)</h3>
-                    <p className="user__account--amount">$10,928.42</p>
-                    <p className="user__account--description">Available Balance</p>
-                </div>
-                <div className="user__account-actions">
-                    <button className="user__account-actions--transaction-button">View transactions</button>
-                </div>
-            </section>
-
-            <section className="user__account">
-                <div className="user__account--content">
-                    <h3 className="user__account--title">Argent Bank Credit Card (x8349)</h3>
-                    <p className="user__account--amount">$184.30</p>
-                    <p className="user__account--description">Current Balance</p>
-                </div>
-                <div className="user__account-actions">
-                    <button className="user__account-actions--transaction-button">View transactions</button>
-                </div>
-            </section>
+            <AccountContent title="Argent Bank Checking (x8349)" amount="$2,082.79" description="Available Balance" />
+            
+            <AccountContent title="Argent Bank Savings (x6712)" amount="$10,928.42" description="Available Balance" />
+            
+            <AccountContent title="Argent Bank Credit Card (x8349)" amount="$184.30" description="Current Balance" />
+            
         </main>
     )
 }

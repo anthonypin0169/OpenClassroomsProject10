@@ -8,11 +8,11 @@ export function SignIn() {
   const dispatch = useDispatch()
   const { isAuthenticated, isLoading, error } = useSelector((state) => state.auth)
   const navigate = useNavigate()
-useEffect(() => {
-  if(!isLoading && isAuthenticated){
-    navigate("/profile")
-  }
-},[isAuthenticated, isLoading, navigate])
+  useEffect(() => {
+    if(!isLoading && isAuthenticated){
+      navigate("/profile")
+    }
+  },[isAuthenticated, isLoading, navigate])
 
   const handleSubmit = (e) => {
     e.preventDefault()

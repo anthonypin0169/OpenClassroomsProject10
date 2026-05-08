@@ -5,20 +5,34 @@ export const loginUser = createAsyncThunk(
   'auth/login',
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await fetch('http://localhost:3001/api/v1/user/login', {
+      const loginResponse = await fetch('http://localhost:3001/api/v1/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials)
       })
-      
-      if (!response.ok) {
+
+      if (!loginResponse.ok) {
         throw new Error('Identifiants incorrects')
       }
-      const data = await response.json()
-      localStorage.setItem('token', data.body.token)
-      return data.body 
+      const loginData = await loginResponse.json()
+      const token = loginData.body.token
+      localStorage.setItem('token', token)
+
+      const profileResponse = await fetch('http://localhost:3001/api/v1/user/profile', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      })
+
+      if (!profileResponse.ok) {
+        throw new Error('Erreur lors de la récupération du profil')
+      }
+      const profileData = await profileResponse.json()
+      return { token, user: profileData.body }
     } catch (error) {
-      return rejectWithValue(error.message) 
+      return rejectWithValue(error.message)
     }
   }
 )

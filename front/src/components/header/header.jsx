@@ -1,23 +1,48 @@
 import "./header.scss"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux"
+import { logout } from "../../store/authSlice"
 import logo from "../../assets/argentBankLogo.png"
 
-export default function Header () {
-    return(
-         <nav className="main-nav">
+export default function Header() {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const { isAuthenticated, user } = useSelector((state) => state.auth)
+
+    const handleLogout = () => {
+        localStorage.removeItem('token')
+        dispatch(logout())
+        navigate('/')
+    }
+
+    return (
+        <nav className="main-nav">
             <NavLink to="/" className="main-nav__logo">
                 <img
-                className="main-nav__logo--image"
-                src={logo}
-                alt="Argent Bank Logo"
+                    className="main-nav__logo--image"
+                    src={logo}
+                    alt="Argent Bank Logo"
                 />
                 <h1 className="sr-only">Argent Bank</h1>
             </NavLink>
             <div>
-                <NavLink to="/login" className="main-nav__item">
-                    <i className="fa fa-user-circle"></i>
-                    Sign In 
-                </NavLink>
+                {isAuthenticated ? (
+                    <>
+                        <span className="main-nav__item">
+                            <i className="fa fa-user-circle"></i>
+                            {user?.firstName}
+                        </span>
+                        <button className="main-nav__item" onClick={handleLogout}>
+                            <i className="fa fa-sign-out"></i>
+                            Sign Out
+                        </button>
+                    </>
+                ) : (
+                    <NavLink to="/login" className="main-nav__item">
+                        <i className="fa fa-user-circle"></i>
+                        Sign In
+                    </NavLink>
+                )}
             </div>
         </nav>
     )

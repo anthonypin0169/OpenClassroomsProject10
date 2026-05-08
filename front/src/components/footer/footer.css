@@ -1,1 +1,20 @@
-/*# sourceMappingURL=footer.css.map */
+.footer {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #ccc;
+  padding: 2rem 0 1.5rem;
+}
+.footer__text {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 0 1.1rem;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=footer.css.map */
