@@ -34,8 +34,7 @@ export function SignIn() {
 
         <div className="sign-in__input-wrapper">
             <label className="sign-in__label" htmlFor="email">Username</label>
-            <input
-              className="sign-in__input"
+            <input className="sign-in__input"
               type="email"
               id="email"
               name="email"
@@ -47,8 +46,7 @@ export function SignIn() {
 
         <div className="sign-in__input-wrapper">
             <label className="sign-in__label" htmlFor="password">Password</label>
-            <input
-              className="sign-in__input"
+            <input className="sign-in__input"
               type="password"
               id="password"
               name="password"

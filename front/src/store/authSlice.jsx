@@ -38,7 +38,6 @@ export const loginUser = createAsyncThunk(
 )
 
 const initialState = {
-  user: null,
   token: null,
   isAuthenticated: false,
   isLoading: false,
@@ -51,7 +50,6 @@ const authSlice = createSlice({
   reducers: {
 
     logout: (state) => {
-      state.user = null
       state.token = null
       state.isAuthenticated = false
     },
@@ -69,7 +67,6 @@ const authSlice = createSlice({
         state.isLoading = false
         state.isAuthenticated = true
         state.token = action.payload.token
-        state.user = action.payload.user
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false
