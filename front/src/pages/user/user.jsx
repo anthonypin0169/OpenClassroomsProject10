@@ -14,7 +14,7 @@ export default function User () {
             {isEditing ? (
                 <div className="user__header">
                     <h1 className="user__header--title">Edit user info</h1>
-                    <ChangeUsername onCancel={() => setIsEditing(false)} />
+                    <ChangeUsername onCancel={() => setIsEditing(false)} profile={user} />
             </div> 
             ) : 
             ( 

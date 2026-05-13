@@ -1,17 +1,23 @@
 .userForm{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 25px;
     &__wrapper{
-        &--label{
-
-        }
         &--input{
-            
+          height: 28px;
+          width: 220px;
+          border-radius: 5px;
+          border: 1px solid grey;
         }
     }
     &__buttons{
       display: flex;
       justify-content: center;
       gap: 25px;
+      margin-top: 25px;
       &--modify-button{
+        width: 180px;
         border-color: #00bc77;
         background-color: #00bc77;
         color: #fff;
@@ -27,4 +33,7 @@
         }
       }
     }
+}
+.disabled-input{
+  color: #fff;
 }
